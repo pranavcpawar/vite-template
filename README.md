@@ -1,1 +1,1 @@
-# fill-me
+# vite-project-template

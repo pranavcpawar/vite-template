@@ -3,7 +3,12 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 
-const container = document.getElementById('root') as HTMLDivElement;
+const container = document.getElementById('root') as HTMLDivElement | null;
+
+if (!container) {
+  throw new Error('No root element found');
+}
+
 const root = createRoot(container);
 
 root.render(
